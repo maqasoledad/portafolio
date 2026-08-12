@@ -564,4 +564,24 @@ footer {
     font-size: 1.8rem;
   }
 }
- 
+
+
+
+
+
+     <script>
+let currentIndex = 0;
+const slides = document.getElementById("slides");
+const totalSlides = slides.children.length;
+
+function move(direction) {
+  currentIndex += direction;
+
+  // límites
+  if (currentIndex < 0) currentIndex = totalSlides - 1;
+  if (currentIndex >= totalSlides) currentIndex = 0;
+
+  // desplazar contenedor
+  slides.style.transform = `translateX(-${currentIndex * 378}px)`;
+}
+</script>
