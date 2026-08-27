@@ -98,7 +98,7 @@ main {
 }
  
 /* ---- CARRUSEL ---- */
-.javascript {
+.carousel{
   position: relative;
   width: 378px;   /* ~10 cm a 96dpi */
   height: 378px;
@@ -247,7 +247,166 @@ main {
   background: #7b2fff;
   box-shadow: 0 0 12px #7b2fff88;
 }
+
+/* ---- REDES SOCIALES ---- */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 20px 0;
+}
  
+.redes-sociales a {
+  color: #c49fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  border: 1px solid #3b006e;
+  border-radius: 20px;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+ 
+.redes-sociales a:hover {
+  color: #ffffff;
+  border-color: #7b2fff;
+  box-shadow: 0 0 10px #7b2fff66;
+}
+ 
+footer .redes-sociales {
+  padding: 0 0 14px;
+}
+ 
+/* ---- CARRUSEL DE YOUTUBE ---- */
+.carousel-yt {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #3b006e;
+  border-radius: 6px;
+  background: #0d0010;
+}
+ 
+.yt-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+ 
+.yt-slide {
+  min-width: 100%;
+  padding: 40px 60px;
+  text-align: center;
+}
+ 
+.yt-slide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+ 
+.yt-play-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #3b006e;
+  border: 1px solid #7b2fff;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+ 
+.yt-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+ 
+.yt-sub {
+  color: #7b2fff;
+  font-size: 0.9rem;
+}
+ 
+.carousel-yt .btn-prev,
+.carousel-yt .btn-next {
+  top: 50%;
+}
+ 
+/* ---- GRID DE PROYECTOS ---- */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+ 
+.proyecto-col {
+  background: #0d0010;
+  border: 1px solid #3b006e;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.proyecto-col h3 {
+  color: #7b2fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+ 
+.proyecto-col p {
+  flex: 1;
+}
+ 
+@media (max-width: 1100px) {
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width: 600px) {
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .yt-slide {
+    padding: 30px 20px;
+  }
+}
+ 
+/* ---- TABLA DE EXPERIENCIA ---- */
+.tabla-experiencia,
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ 
+.tabla-experiencia th,
+.tabla-experiencia td,
+table th,
+table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #3b006e;
+  color: #c49fff;
+}
+ 
+.tabla-experiencia th,
+table th {
+  background: #3b006e;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+ 
+.tabla-experiencia tr:hover,
+table tr:hover {
+  background: #24003f;
+}
+
 /* ---- FOOTER ---- */
 footer {
   background: #1a0030;
